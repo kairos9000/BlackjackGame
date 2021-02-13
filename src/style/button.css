@@ -1,0 +1,17 @@
+button {
+    font-size: 1em;
+    color: inherit;
+    cursor: pointer;
+    padding: 0.3em 0.6em;
+    background-color: #57f;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition-property: box-shadow, background-color;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #35c;
+    box-shadow: none;
+}
