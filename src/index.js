@@ -1,6 +1,7 @@
 import "./style";
 import { ListOutput } from "./component/ListOutput";
 
+
 // const listOutput = new ListOutput();
 
 // const elementInputName = document.getElementById("input-name");

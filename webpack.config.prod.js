@@ -19,7 +19,11 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                use: [MiniCssExtractPlugin.loader, {loader: "css-loader", options: {url: false}}, "sass-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+            },
+            {
+                test:/\.png$/,
+                use: ['file-loader']
             },
         ],
     },
@@ -31,3 +35,6 @@ module.exports = {
         }),
     ],
 };
+
+
+// {loader: "css-loader", options: {url: false}} instead of just "css-loader" in rules

@@ -14,7 +14,11 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                use: ["style-loader", {loader: "css-loader", options: {url: false}}, "sass-loader"],
+                use: ["style-loader", "css-loader", "sass-loader"],
+            },
+            {
+                test:/\.png$/,
+                use: ['file-loader']
             },
         ],
     },
@@ -34,3 +38,5 @@ module.exports = {
         hot: true,
     },
 };
+
+// {loader: "css-loader", options: {url: false}} instead of just "css-loader" in rules
