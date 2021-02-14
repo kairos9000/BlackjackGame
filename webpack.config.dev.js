@@ -8,13 +8,13 @@ module.exports = {
         app: "./src/index.js",
     },
     resolve: {
-        extensions: [".css", ".js"],
+        extensions: [".scss", ".js"],
     },
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"],
+                test: /\.scss$/,
+                use: ["style-loader", {loader: "css-loader", options: {url: false}}, "sass-loader"],
             },
         ],
     },

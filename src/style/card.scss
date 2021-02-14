@@ -1,0 +1,28 @@
+#card {  
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+
+
+    &:active {
+        transform: rotateY(180deg);
+    } 
+    
+    div {
+        padding: 35px 20px;
+        user-select: none;
+        background-color: #eee;
+        backface-visibility: hidden;
+        border-radius: 5px;   
+    }
+} 
+
+#front {
+    position: absolute;
+    transform: rotateY(180deg);
+}
+
+#back {
+    color: transparent;
+    background-size: 100%;
+    background-image: url("card-backface.png");
+}

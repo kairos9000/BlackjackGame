@@ -6,8 +6,8 @@ input {
     padding: 0.2em;
     outline: none;
     border-bottom: solid currentColor 2px;
-}
 
-input:focus {
-    border-color: #57f;
+    &:focus {
+        border-color: #57f;
+    }
 }

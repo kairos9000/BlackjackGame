@@ -13,13 +13,13 @@ module.exports = {
         filename: "[name].[contenthash].js",
     },
     resolve: {
-        extensions: [".css", ".js"],
+        extensions: [".scss", ".js"],
     },
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                test: /\.scss$/,
+                use: [MiniCssExtractPlugin.loader, {loader: "css-loader", options: {url: false}}, "sass-loader"],
             },
         ],
     },
