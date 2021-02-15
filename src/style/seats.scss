@@ -1,0 +1,25 @@
+#playerSeats{
+    display: flex;
+    margin-top: 500px;
+    flex-direction: row;
+    width: 1080px;
+    max-width: 90%;
+    position: relative;
+}
+
+.seat {
+    height: 100px;
+    width: 250px;
+    margin: 0 10%;
+    padding: 10px;
+    border: 10px solid #eee;
+    border-radius: 10px;
+}
+
+#player1Seat { 
+    transform: rotate(30deg) translate(0, -60px);
+}
+
+#player3Seat {
+    transform: rotate(-30deg) translate(0, -60px);
+}

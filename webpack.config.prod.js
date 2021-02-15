@@ -13,7 +13,7 @@ module.exports = {
         filename: "[name].[contenthash].js",
     },
     resolve: {
-        extensions: [".scss", ".js"],
+        extensions: [".scss", ".js", ".png"],
     },
     module: {
         rules: [
@@ -37,4 +37,4 @@ module.exports = {
 };
 
 
-// {loader: "css-loader", options: {url: false}} instead of just "css-loader" in rules
+// {loader: "css-loader", options: {url: false}} instead of just "css-loader" in rules to replace file-loader
