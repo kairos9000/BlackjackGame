@@ -8,7 +8,7 @@
     } 
     
     div {
-        padding: 35px 20px;
+        padding: 55px 31px;
         user-select: none;
         background-color: #eee;
         backface-visibility: hidden;
@@ -19,6 +19,9 @@
 #front {
     position: absolute;
     transform: rotateY(180deg);
+    color: transparent;
+    background-size: 100%;
+    background-image: url("/assets/cards/KC.png");
 }
 
 #back {
