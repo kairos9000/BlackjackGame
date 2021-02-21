@@ -1,7 +1,7 @@
 .card {
     transform-style: preserve-3d;
     transition: transform 0.4s;
-    margin-left: 10px;
+    position: absolute;
 
     &:active {
         transform: rotateY(180deg);
@@ -21,7 +21,6 @@
     transform: rotateY(180deg);
     color: transparent;
     background-size: 100%;
-    // background-image: url("/assets/cards/KC.png");
 }
 
 .back {
@@ -33,4 +32,5 @@
 #cardsAndBankSeat {
     display: flex;
     flex-direction: row;
+    margin: 50px;
 }
