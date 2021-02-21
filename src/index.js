@@ -1,9 +1,9 @@
 import "./style";
 import { ListOutput } from "./component/ListOutput";
 
-document.querySelector("#startGameButton").addEventListener("click", event =>{
-    console.log("Hell")
-})
+document.querySelector("#startGameButton").addEventListener("click", (event) => {
+    console.log("Hell");
+});
 // const listOutput = new ListOutput();
 
 // const elementInputName = document.getElementById("input-name");
