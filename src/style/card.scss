@@ -1,31 +1,36 @@
-#card {  
+.card {
     transform-style: preserve-3d;
     transition: transform 0.4s;
-
+    margin-left: 10px;
 
     &:active {
         transform: rotateY(180deg);
-    } 
-    
+    }
+
     div {
-        padding: 55px 31px;
+        padding: 61px 40px;
         user-select: none;
         background-color: #eee;
         backface-visibility: hidden;
-        border-radius: 5px;   
+        border-radius: 5px;
     }
-} 
+}
 
-#front {
+.front {
     position: absolute;
     transform: rotateY(180deg);
     color: transparent;
     background-size: 100%;
-    background-image: url("/assets/cards/KC.png");
+    // background-image: url("/assets/cards/KC.png");
 }
 
-#back {
+.back {
     color: transparent;
     background-size: 100%;
     background-image: url("/assets/card-backface.png");
+}
+
+#cardsAndBankSeat {
+    display: flex;
+    flex-direction: row;
 }

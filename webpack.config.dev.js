@@ -17,8 +17,8 @@ module.exports = {
                 use: ["style-loader", "css-loader", "sass-loader"],
             },
             {
-                test:/\.png$/,
-                use: ['file-loader']
+                test: /\.png$/,
+                use: ["url-loader"],
             },
         ],
     },
@@ -31,10 +31,7 @@ module.exports = {
         host: "0.0.0.0",
         port: 80,
         openPage: "http://localhost",
-        contentBase: [
-            path.resolve(__dirname, "assets"),
-            path.resolve(__dirname, "src/index.html")
-        ],
+        contentBase: [path.resolve(__dirname, "assets"), path.resolve(__dirname, "src/index.html")],
         watchContentBase: true,
         stats: "errors-only",
         overlay: true,
