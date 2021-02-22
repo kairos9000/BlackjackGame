@@ -26,6 +26,11 @@
 .back {
     color: transparent;
     background-size: 100%;
+    // in CSS or SCSS Files we need to specify the whole path, because
+    // webpack searches from the beginning of the whole folder "BlackjackGame", due to the
+    // fact that no path is specified in the webpack.config.dev.js file.
+    // For index.js a path is specified, which begins at "assets" so there is no need to
+    // specify the whole path
     background-image: url("/assets/card-backface.png");
 }
 
