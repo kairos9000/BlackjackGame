@@ -1,13 +1,12 @@
 import "./style";
 import "./prerequisites.js";
-import { shuffle } from "./card_shuffling/shuffle.js";
+import { initCardsArray, shuffle, randomInteger } from "./cardsStackPreparation.js";
 
-let array = [];
-for (let i = 0; i < 100; i++) {
-    array.push(i);
-}
 document.querySelector("#startGameButton").addEventListener("click", (event) => {
     console.log(event);
-    shuffle(array);
-    console.log(array);
+    let cardsArray = initCardsArray();
+    shuffle(cardsArray);
+    let randomMixIndex = randomInteger(250, 300);
+    cardsArray.splice(randomMixIndex, 0, "Mix");
+    console.log(cardsArray);
 });

@@ -32,6 +32,7 @@ let parentDiv = document.getElementById("cardsAndBankSeat");
 let children = parentDiv.getElementsByClassName("card");
 
 window.addEventListener("resize", function () {
+    // Listener if the window-width changes to make the game responsive
     let windowWidth = window.matchMedia("(max-width: 1300px)");
     transform = "4";
 
@@ -46,7 +47,7 @@ window.addEventListener("resize", function () {
         transform = parseInt(transform) + 4;
         transform.toString();
     }
-}); // Attach listener function on state changes
+});
 
 function cardStackMoveMediaQuery(windowWidth, card) {
     if (windowWidth.matches) {
