@@ -19,13 +19,12 @@ for (let i = 0; i < 10; i++) {
     card.appendChild(cardFront);
     card.appendChild(cardBack);
 
-    transform = parseInt(transform) + 4;
-    transform.toString();
-
     document.getElementById("cardsAndBankSeat").appendChild(card);
 
     let windowWidth = window.matchMedia("(max-width: 1300px)");
     cardStackMoveMediaQuery(windowWidth, card); // Call listener function at run time
+    transform = parseInt(transform) + 4;
+    transform.toString();
 }
 
 let parentDiv = document.getElementById("cardsAndBankSeat");
