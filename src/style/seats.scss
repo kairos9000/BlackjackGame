@@ -1,23 +1,19 @@
-#playerSeats{
+#playerSeats {
     display: flex;
     margin-top: 350px;
     flex-direction: row;
     position: relative;
-
 }
 
 .seat {
-    height: 150px;
-    width: 100px;
+    height: 130px;
+    width: 90px;
     margin: 0 150px;
     border: 10px solid #ccc;
     border-radius: 10px;
 }
 
-#player1Seat { 
-    transform: translate(0, -60px);
-}
-
+#player1Seat,
 #player3Seat {
     transform: translate(0, -60px);
 }

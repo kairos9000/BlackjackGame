@@ -35,7 +35,7 @@ window.addEventListener("resize", function () {
     let windowWidth = window.matchMedia("(max-width: 1300px)");
     transform = "4";
 
-    for (let i = 0; i < children.length; i++) {
+    for (let i = 0; i < 10; i++) {
         if (windowWidth.matches) {
             // If media query matches
             children[i].style.transform = "translate(-50px, -" + transform + "px) rotateZ(45deg) rotateY(30deg)";

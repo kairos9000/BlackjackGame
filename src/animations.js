@@ -1,3 +1,5 @@
+let currCardIndex = 0;
+
 export async function shuffleAnimation(cardsArray, rightStack, leftStack, mixingStack, originalStackPlace) {
     let parentDiv = document.getElementById("cardsAndBankSeat");
     let children = parentDiv.getElementsByClassName("card");
@@ -27,26 +29,17 @@ export async function shuffleAnimation(cardsArray, rightStack, leftStack, mixing
         transform = parseInt(transform) + 4;
         transform.toString();
     }
-
-    await sleep(500);
-
-    let windowWidth = window.matchMedia("(max-width: 1300px)");
-
-    if (windowWidth.matches) {
-        cardDealingAnimation("-50px", ["0px", "5px"]);
-    } else {
-        cardDealingAnimation(cardsArray, "500px", ["0px", "5px"]);
-    }
 }
 
-export async function cardDealingAnimation(cardStack, cardStackPlace, firstPlayerSeat) {
+export async function cardDealingAnimation(cardStack, cardStackPlace, playerSeat) {
     let card = document.createElement("div");
     card.classList.add("card");
 
     let cardFront = document.createElement("div");
     cardFront.classList.add("front");
-    let cardFrontPicture = cardStack[0];
+    let cardFrontPicture = cardStack[currCardIndex];
     cardFront.style.backgroundImage = "url('cards/" + cardFrontPicture + ".png')";
+    currCardIndex += 1;
 
     let cardBack = document.createElement("div");
     cardBack.classList.add("back");
@@ -58,17 +51,18 @@ export async function cardDealingAnimation(cardStack, cardStackPlace, firstPlaye
 
     document.getElementById("cardsAndBankSeat").appendChild(card);
 
-    card.style.transform = "translate(" + cardStackPlace + ", -4px) rotateZ(45deg) rotateY(30deg)";
+    card.style.transform = "translate(" + cardStackPlace + "px, -4px) rotateZ(45deg) rotateY(30deg)";
 
-    await sleep(2000);
+    await sleep(200);
 
-    card.style.transform = "translate(" + firstPlayerSeat[0] + ", " + firstPlayerSeat[1] + ")";
+    card.style.zIndex = "1";
+    card.style.transform = "translate(" + playerSeat[0] + "px, " + playerSeat[1] + "px)";
 
     await sleep(500);
 
-    card.style.transform = "rotateY(180deg)";
+    card.style.transform = "translate(" + playerSeat[0] + "px, " + playerSeat[1] + "px) rotateY(180deg)";
 }
 
-function sleep(ms) {
+export function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
