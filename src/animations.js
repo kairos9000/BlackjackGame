@@ -31,6 +31,37 @@ export async function shuffleAnimation(cardsArray, rightStack, leftStack, mixing
     }
 }
 
+export async function burnFirstCard(cardStackPlace, middlePosition, endStackPosition) {
+    let card = document.createElement("div");
+    card.classList.add("card");
+
+    let cardFront = document.createElement("div");
+    cardFront.classList.add("front");
+    currCardIndex += 1;
+
+    let cardBack = document.createElement("div");
+    cardBack.classList.add("back");
+
+    card.appendChild(cardFront);
+    card.appendChild(cardBack);
+
+    card.style.zIndex = "-5";
+
+    document.getElementById("cardsAndBankSeat").appendChild(card);
+
+    card.style.transform = "translate(" + cardStackPlace + "px, -4px) rotateZ(45deg) rotateY(30deg)";
+
+    await sleep(200);
+
+    card.style.zIndex = "1";
+
+    card.style.transform = "translate(" + middlePosition[0] + "px, " + middlePosition[1] + "px)";
+
+    await sleep(1000);
+
+    card.style.transform = "translate(" + endStackPosition[0] + "px, " + endStackPosition[1] + "px)";
+}
+
 export async function cardDealingAnimation(cardStack, cardStackPlace, playerSeat) {
     let card = document.createElement("div");
     card.classList.add("card");
@@ -56,11 +87,27 @@ export async function cardDealingAnimation(cardStack, cardStackPlace, playerSeat
     await sleep(200);
 
     card.style.zIndex = "1";
+
     card.style.transform = "translate(" + playerSeat[0] + "px, " + playerSeat[1] + "px)";
 
     await sleep(500);
 
     card.style.transform = "translate(" + playerSeat[0] + "px, " + playerSeat[1] + "px) rotateY(180deg)";
+}
+
+export async function collectCards(collectingPosition, endStackPosition) {
+    let parentDiv = document.getElementById("cardsAndBankSeat");
+    let children = parentDiv.getElementsByClassName("card");
+
+    for (let i = currCardIndex + 2; i < children.length; i++) {
+        children[i].style.transform = "translate(" + collectingPosition[0] + "px, " + collectingPosition[1] + "px)";
+    }
+
+    await sleep(1000);
+
+    for (let i = currCardIndex + 2; i < children.length; i++) {
+        children[i].style.transform = "translate(" + endStackPosition[0] + "px, " + endStackPosition[1] + "px)";
+    }
 }
 
 export function sleep(ms) {
