@@ -8,7 +8,8 @@ shuffle(cardsArray);
 let randomMixIndex = randomInteger(250, 300);
 cardsArray.splice(randomMixIndex, 0, "Mix");
 
-document.querySelector("#startGameButton").addEventListener("click", (event) => dealCards());
+// document.querySelector("#startGameButton").addEventListener("click", (event) => dealCards());
+// dealCards();
 
 async function dealCards() {
     let windowWidth = window.matchMedia("(max-width: 1300px)");
@@ -37,7 +38,7 @@ async function dealCards() {
         playerSeatArray.push(bankSeat);
     }
 
-    burnFirstCard(cardStackPlace, ["-40", "0"], ["-500", "0"]);
+    burnFirstCard(cardStackPlace, ["-50", "0"], ["-500", "0"]);
 
     await sleep(2000);
 
@@ -59,5 +60,5 @@ async function dealCards() {
 
     await sleep(2000);
 
-    collectCards(["-40", "0"], ["-500", "0"]);
+    collectCards(["-50", "0"], ["-500", "0"]);
 }

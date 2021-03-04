@@ -1,6 +1,7 @@
 @import "card.scss";
 @import "seats.scss";
 @import "button.scss";
+@import "bettingDiv.scss";
 
 body {
     padding: 1em;
@@ -9,6 +10,7 @@ body {
     background-color: #333;
     color: #eee;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: radial-gradient(circle, #0d965c, #0a8250, #096f45, #085c39, #074a2e);

@@ -1,4 +1,4 @@
-let transform = "4";
+let cardStacktransform = "4";
 
 for (let i = 0; i < 10; i++) {
     let card = document.createElement("div");
@@ -23,8 +23,8 @@ for (let i = 0; i < 10; i++) {
 
     let windowWidth = window.matchMedia("(max-width: 1300px)");
     cardStackMoveMediaQuery(windowWidth, card); // Call listener function at run time
-    transform = parseInt(transform) + 4;
-    transform.toString();
+    cardStacktransform = parseInt(cardStacktransform) + 4;
+    cardStacktransform.toString();
 }
 
 let parentDiv = document.getElementById("cardsAndBankSeat");
@@ -33,26 +33,26 @@ let children = parentDiv.getElementsByClassName("card");
 window.addEventListener("resize", function () {
     // Listener if the window-width changes to make the game responsive
     let windowWidth = window.matchMedia("(max-width: 1300px)");
-    transform = "4";
+    cardStacktransform = "4";
 
     for (let i = 0; i < 10; i++) {
         if (windowWidth.matches) {
             // If media query matches
-            children[i].style.transform = "translate(-50px, -" + transform + "px) rotateZ(45deg) rotateY(30deg)";
+            children[i].style.transform = "translate(-50px, -" + cardStacktransform + "px) rotateZ(45deg) rotateY(30deg)";
         } else {
-            children[i].style.transform = "translate(500px, -" + transform + "px) rotateZ(45deg) rotateY(30deg)";
+            children[i].style.transform = "translate(500px, -" + cardStacktransform + "px) rotateZ(45deg) rotateY(30deg)";
         }
 
-        transform = parseInt(transform) + 4;
-        transform.toString();
+        cardStacktransform = parseInt(cardStacktransform) + 4;
+        cardStacktransform.toString();
     }
 });
 
 function cardStackMoveMediaQuery(windowWidth, card) {
     if (windowWidth.matches) {
         // If media query matches
-        card.style.transform = "translate(-50px, -" + transform + "px) rotateZ(45deg) rotateY(30deg)";
+        card.style.transform = "translate(-50px, -" + cardStacktransform + "px) rotateZ(45deg) rotateY(30deg)";
     } else {
-        card.style.transform = "translate(500px, -" + transform + "px) rotateZ(45deg) rotateY(30deg)";
+        card.style.transform = "translate(500px, -" + cardStacktransform + "px) rotateZ(45deg) rotateY(30deg)";
     }
 }

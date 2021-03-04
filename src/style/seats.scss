@@ -1,6 +1,6 @@
 #playerSeats {
     display: flex;
-    margin-top: 300px;
+    margin-top: 200px;
     flex-direction: row;
     position: relative;
 }
@@ -14,6 +14,26 @@
 }
 
 #player1Seat,
-#player3Seat {
+#player3Seat,
+#player1Info,
+#player3Info {
     transform: translate(0, -60px);
+}
+
+.info {
+    height: 50px;
+    background-color: #333;
+    margin: 50px auto;
+}
+
+#player1Info {
+    margin-left: 150px;
+}
+
+#player2Info {
+    margin: 50px 75px;
+}
+
+#player3Info {
+    margin-right: 150px;
 }

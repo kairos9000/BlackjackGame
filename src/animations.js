@@ -1,4 +1,5 @@
 let currCardIndex = 0;
+let cardEndStack = 0.13;
 
 export async function shuffleAnimation(cardsArray, rightStack, leftStack, mixingStack, originalStackPlace) {
     let parentDiv = document.getElementById("cardsAndBankSeat");
@@ -59,7 +60,7 @@ export async function burnFirstCard(cardStackPlace, middlePosition, endStackPosi
 
     await sleep(1000);
 
-    card.style.transform = "translate(" + endStackPosition[0] + "px, " + endStackPosition[1] + "px)";
+    card.style.transform = "translate(" + endStackPosition[0] + "px, " + endStackPosition[1] + "px) rotateZ(-45deg) rotateY(-30deg)";
 }
 
 export async function cardDealingAnimation(cardStack, cardStackPlace, playerSeat) {
@@ -106,7 +107,10 @@ export async function collectCards(collectingPosition, endStackPosition) {
     await sleep(1000);
 
     for (let i = currCardIndex + 2; i < children.length; i++) {
-        children[i].style.transform = "translate(" + endStackPosition[0] + "px, " + endStackPosition[1] + "px)";
+        endStackPosition[1] = parseFloat(endStackPosition[1]) - cardEndStack;
+        endStackPosition[1].toString();
+
+        children[i].style.transform = "translate(" + endStackPosition[0] + "px, " + endStackPosition[1] + "px) rotateZ(-45deg) rotateY(30deg)";
     }
 }
 
