@@ -5,6 +5,23 @@
     position: relative;
 }
 
+#player1Info,
+#player2Info,
+#player3Info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    img {
+        padding: 10px;
+        padding-right: 20px;
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+    }
+}
+
 .seat {
     height: 130px;
     width: 90px;
@@ -21,8 +38,8 @@
 }
 
 .info {
-    height: 50px;
     background-color: #333;
+    width: 200px;
     margin: 50px auto;
 }
 
@@ -31,9 +48,30 @@
 }
 
 #player2Info {
-    margin: 50px 75px;
+    margin: 50px 100px;
 }
 
 #player3Info {
     margin-right: 150px;
+}
+
+.playerMoney {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    display: table;
+    width: inherit;
+}
+
+.playerMoney:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%; /* <-- put left edge in the middle */
+    margin-left: -40%; /* <-- shift to the left by half of the width */
+    width: 80%;
+    height: 1px;
+    background: #ccc;
+    margin-top: -10px;
 }
