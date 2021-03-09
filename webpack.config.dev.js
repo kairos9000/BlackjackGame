@@ -8,7 +8,7 @@ module.exports = {
         app: "./src/index.js",
     },
     resolve: {
-        extensions: [".scss", ".js", ".png"],
+        extensions: [".scss", ".js", ".png", ".svg"],
     },
     module: {
         rules: [
@@ -18,6 +18,10 @@ module.exports = {
             },
             {
                 test: /\.png$/,
+                use: ["url-loader"],
+            },
+            {
+                test: /\.svg$/,
                 use: ["url-loader"],
             },
         ],
