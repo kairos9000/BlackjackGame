@@ -34,16 +34,15 @@
 
 .slider::-webkit-slider-runnable-track {
     height: 31px;
-    margin-top: -1px;
 }
 
 .slider::-webkit-slider-thumb {
     width: 30px;
     -webkit-appearance: none;
-    height: 32px;
+    height: 31px;
     cursor: pointer;
     background: url("/assets/slider_thumb_icon.svg") center center no-repeat;
-    box-shadow: -500px -120px 0px 500px #ffcf40;
+    box-shadow: -500px -130px 0px 500px #ffcf40;
     border-radius: 40px;
 }
 
@@ -53,6 +52,6 @@
     height: 32px;
     cursor: pointer;
     background: url("/assets/slider_thumb_icon.svg") center center no-repeat;
-    box-shadow: -500px -120px 0 500px #ffcf40;
+    box-shadow: -500px -130px 0 500px #ffcf40;
     border-radius: 40px;
 }
