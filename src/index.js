@@ -9,15 +9,15 @@ let randomMixIndex = randomInteger(250, 300);
 cardsArray.splice(randomMixIndex, 0, "Mix");
 
 // document.querySelector("#startGameButton").addEventListener("click", (event) => dealCards());
-// dealCards();
+dealCards();
 
 async function dealCards() {
     let windowWidth = window.matchMedia("(max-width: 1300px)");
 
     if (windowWidth.matches) {
-        shuffleAnimation(cardsArray, "-500px", "-100px", "-300px", "-50px");
+        shuffleAnimation("-500px", "-100px", "-300px", "-50px");
     } else {
-        shuffleAnimation(cardsArray, "-200px", "200px", "0px", "500px");
+        shuffleAnimation("-220px", "220px", "-40px", "500px");
     }
 
     await sleep(4000);
@@ -27,9 +27,9 @@ async function dealCards() {
         var firstPlayerSeat = ["0", "5"];
     } else {
         var cardStackPlace = "500";
-        var firstPlayerSeat = ["370", "304"];
-        var secondPlayerSeat = ["-40", "364"];
-        var thirdPlayerSeat = ["-450", "304"];
+        var firstPlayerSeat = ["370", "290"];
+        var secondPlayerSeat = ["-40", "350"];
+        var thirdPlayerSeat = ["-450", "290"];
         var bankSeat = ["-40", "0"];
         var playerSeatArray = [];
         playerSeatArray.push(firstPlayerSeat);
@@ -38,7 +38,7 @@ async function dealCards() {
         playerSeatArray.push(bankSeat);
     }
 
-    burnFirstCard(cardStackPlace, ["-50", "0"], ["-500", "0"]);
+    burnFirstCard(cardStackPlace, ["-40", "0"], ["-500", "0"]);
 
     await sleep(2000);
 
@@ -60,5 +60,5 @@ async function dealCards() {
 
     await sleep(2000);
 
-    collectCards(["-50", "0"], ["-500", "0"]);
+    collectCards(["-40", "0"], ["-500", "0"]);
 }

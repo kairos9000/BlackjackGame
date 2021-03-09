@@ -1,7 +1,7 @@
 let currCardIndex = 0;
 let cardEndStack = 0.13;
 
-export async function shuffleAnimation(cardsArray, rightStack, leftStack, mixingStack, originalStackPlace) {
+export async function shuffleAnimation(rightStack, leftStack, mixingStack, originalStackPlace) {
     let parentDiv = document.getElementById("cardsAndBankSeat");
     let children = parentDiv.getElementsByClassName("card");
 
@@ -18,7 +18,7 @@ export async function shuffleAnimation(cardsArray, rightStack, leftStack, mixing
     await sleep(1000);
 
     for (let i = 0; i < 10; i++) {
-        children[i].style.transform = "translate(" + mixingStack + ", 5px)";
+        children[i].style.transform = "translate(" + mixingStack + ", 0px)";
         await sleep(20);
     }
 
