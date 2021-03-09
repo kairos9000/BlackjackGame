@@ -8,23 +8,40 @@
     <body>
         <div id="mainGameField">
             <div id="cardsAndBankSeat"></div>
+            <div id="bankSeat" class="seat">
+                <div class="three-quarter-circle">
+                    <span class="cardValue">0</span>
+                </div>
+            </div>
             <div id="playerSeats">
                 <div id="player3">
-                    <div id="player3Seat" class="seat"></div>
+                    <div id="player3Seat" class="seat">
+                        <div class="three-quarter-circle">
+                            <span class="cardValue">0</span>
+                        </div>
+                    </div>
                     <div id="player3Info" class="info">
                         <span class="playerProfile"><img src="Profile_Icon_green.svg" alt="Blue Profile Icon" /> Player 3</span>
                         <div class="playerMoney">50K</div>
                     </div>
                 </div>
                 <div id="player2">
-                    <div id="player2Seat" class="seat"></div>
+                    <div id="player2Seat" class="seat">
+                        <div class="three-quarter-circle">
+                            <span class="cardValue">0</span>
+                        </div>
+                    </div>
                     <div id="player2Info" class="info">
                         <span class="playerProfile"><img src="Profile_Icon_red.svg" alt="Blue Profile Icon" /> Player 2</span>
                         <div class="playerMoney">50K</div>
                     </div>
                 </div>
                 <div id="player1">
-                    <div id="player1Seat" class="seat"></div>
+                    <div id="player1Seat" class="seat">
+                        <div class="three-quarter-circle">
+                            <span class="cardValue">0</span>
+                        </div>
+                    </div>
                     <div id="player1Info" class="info">
                         <span class="playerProfile"><img src="Profile_Icon_blue.svg" alt="Blue Profile Icon" /> Player 1</span>
                         <div class="playerMoney">50K</div>
@@ -33,6 +50,10 @@
             </div>
             <!-- <button id="startGameButton">Start</button> -->
         </div>
-        <div id="bettingDiv"></div>
+        <div id="bettingDiv">
+            <div id="slidercontainer">
+                <input type="range" min="1" max="50" value="25" class="slider" id="myRange" />
+            </div>
+        </div>
     </body>
 </html>

@@ -20,6 +20,8 @@
         display: flex;
         align-items: center;
     }
+    box-shadow: 3px 5px 5px #222;
+    border-radius: 10px;
 }
 
 .seat {
@@ -27,7 +29,7 @@
     width: 90px;
     margin: 0 150px;
     border: 10px solid #ccc;
-    border-radius: 10px;
+    border-radius: 0 10px 10px 10px;
 }
 
 #player1Seat,
@@ -74,4 +76,28 @@
     height: 1px;
     background: #ccc;
     margin-top: -10px;
+}
+
+#bankSeat {
+    margin-top: -64px;
+}
+
+.three-quarter-circle {
+    width: 0px;
+    height: 0px;
+    border-radius: 30px;
+    border: 30px solid #222;
+    border-top-color: transparent;
+    position: absolute;
+    transform: rotate(135deg) translateY(57px);
+    display: flex;
+    justify-content: center;
+    z-index: -5;
+}
+
+.cardValue {
+    position: absolute;
+    transform: rotateZ(-135deg) translateY(-5px) translateX(7px);
+    z-index: -5;
+    color: #ccc;
 }
