@@ -48,11 +48,11 @@
 }
 
 .slider::-moz-range-thumb {
-    width: 30px;
+    width: 31px;
     -webkit-appearance: none;
-    height: 31.5px;
+    height: 32px;
     cursor: pointer;
     background: url("/assets/slider_thumb_icon.svg") center center no-repeat;
     box-shadow: -500px -124px 0 500px #ffcf40;
-    border-radius: 40px;
+    border-radius: 20px;
 }
