@@ -42,7 +42,7 @@
 .info {
     background-color: #333;
     width: 200px;
-    margin: 50px auto;
+    margin: 25px auto;
 }
 
 #player1Info {
@@ -50,7 +50,7 @@
 }
 
 #player2Info {
-    margin: 50px 100px;
+    margin: 25px 100px;
 }
 
 #player3Info {
@@ -64,18 +64,18 @@
     text-align: center;
     display: table;
     width: inherit;
-}
 
-.playerMoney:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%; /* <-- put left edge in the middle */
-    margin-left: -40%; /* <-- shift to the left by half of the width */
-    width: 80%;
-    height: 1px;
-    background: #ccc;
-    margin-top: -10px;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%; /* <-- put left edge in the middle */
+        margin-left: -40%; /* <-- shift to the left by half of the width */
+        width: 80%;
+        height: 1px;
+        background: #ccc;
+        margin-top: -10px;
+    }
 }
 
 #bankSeat {

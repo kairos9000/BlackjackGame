@@ -2,6 +2,7 @@ import "./style";
 import "./prerequisites.js";
 import { initCardsArray, shuffle, randomInteger } from "./cardsStackPreparation.js";
 import { shuffleAnimation, cardDealingAnimation, sleep, collectCards, burnFirstCard } from "./animations.js";
+import "./betting.js";
 
 let cardsArray = initCardsArray();
 shuffle(cardsArray);
@@ -46,7 +47,7 @@ async function dealCards() {
         if (i == 1) {
             for (let j in playerSeatArray) {
                 for (let z in playerSeatArray[j]) {
-                    playerSeatArray[j][z] = parseInt(playerSeatArray[j][z]) + 50;
+                    playerSeatArray[j][z] = parseInt(playerSeatArray[j][z]) + 25;
                     playerSeatArray[j][z].toString();
                 }
             }

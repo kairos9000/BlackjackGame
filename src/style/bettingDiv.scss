@@ -1,9 +1,7 @@
 #bettingDiv {
     width: 800px;
     max-width: 90%;
-    height: 50px;
     background-color: #333;
-    margin-top: 10px;
     border-radius: 10px;
     box-shadow: 3px 5px 5px #222;
 }
@@ -26,10 +24,10 @@
     transition: opacity 0.2s;
     overflow: hidden;
     border-radius: 120px;
-}
 
-.slider:hover {
-    opacity: 1;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .slider::-webkit-slider-runnable-track {
@@ -55,4 +53,33 @@
     background: url("/assets/slider_thumb_icon.svg") center center no-repeat;
     box-shadow: -500px -124px 0 500px #ffcf40;
     border-radius: 20px;
+}
+
+#confirmBet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    border-top: 1px solid #eee;
+    margin: 0 auto;
+}
+
+#confirm {
+    background-size: 100%;
+    background-image: url("/assets/confirmation.svg");
+    height: 40px;
+    width: 40px;
+    background-color: #0dac50;
+    margin: 10px 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #111;
+
+    &:active {
+        background-color: #275d3b;
+    }
+}
+
+#currBettingAmount {
+    width: 70px;
 }

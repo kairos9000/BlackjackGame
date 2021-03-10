@@ -22,7 +22,7 @@
                     </div>
                     <div id="player3Info" class="info">
                         <span class="playerProfile"><img src="Profile_Icon_green.svg" alt="Blue Profile Icon" /> Player 3</span>
-                        <div class="playerMoney">50K</div>
+                        <div class="playerMoney">50.000€</div>
                     </div>
                 </div>
                 <div id="player2">
@@ -33,7 +33,7 @@
                     </div>
                     <div id="player2Info" class="info">
                         <span class="playerProfile"><img src="Profile_Icon_red.svg" alt="Blue Profile Icon" /> Player 2</span>
-                        <div class="playerMoney">50K</div>
+                        <div class="playerMoney">50.000€</div>
                     </div>
                 </div>
                 <div id="player1">
@@ -44,7 +44,7 @@
                     </div>
                     <div id="player1Info" class="info">
                         <span class="playerProfile"><img src="Profile_Icon_blue.svg" alt="Blue Profile Icon" /> Player 1</span>
-                        <div class="playerMoney">50K</div>
+                        <div class="playerMoney">50.000€</div>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,16 @@
         </div>
         <div id="bettingDiv">
             <div id="slidercontainer">
-                <input type="range" min="1" max="50" value="25" class="slider" id="myRange" />
+                <input type="range" min="1" max="50" value="25" class="slider" id="bettingSlider" />
+            </div>
+            <div id="bettingButtons">
+                <button id="minButton" class="bettingButton">Minimum ~ 100€</button>
+                <button id="doubleButton" class="bettingButton">Double ~ 5.000€</button>
+                <button id="maxButton" class="bettingButton">Maximum ~ 5.000€</button>
+            </div>
+            <div id="confirmBet">
+                <span id="currBettingAmount">2.500€</span>
+                <button id="confirm"></button>
             </div>
         </div>
     </body>
