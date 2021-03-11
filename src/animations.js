@@ -70,6 +70,7 @@ export async function cardDealingAnimation(cardStack, cardStackPlace, playerSeat
     let cardFront = document.createElement("div");
     cardFront.classList.add("front");
     let cardFrontPicture = cardStack[currCardIndex];
+
     cardFront.style.backgroundImage = "url('cards/" + cardFrontPicture + ".png')";
     currCardIndex += 1;
 
@@ -94,6 +95,8 @@ export async function cardDealingAnimation(cardStack, cardStackPlace, playerSeat
     await sleep(500);
 
     card.style.transform = "translate(" + playerSeat[0] + "px, " + playerSeat[1] + "px) rotateY(180deg)";
+
+    return cardStack[currCardIndex - 1];
 }
 
 export async function collectCards(collectingPosition, endStackPosition) {

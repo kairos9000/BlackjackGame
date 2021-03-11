@@ -32,13 +32,13 @@
 
 .slider::-webkit-slider-runnable-track {
     height: 31px;
-    margin-top: 0.2px;
+    margin-top: -0.2px;
 }
 
 .slider::-webkit-slider-thumb {
-    width: 30.9px;
+    width: 30px;
     -webkit-appearance: none;
-    height: 30.9px;
+    height: 31px;
     cursor: pointer;
     background: url("/assets/slider_thumb_icon.svg") center center no-repeat;
     box-shadow: -500px -124px 0px 500px #ffcf40;
@@ -46,9 +46,9 @@
 }
 
 .slider::-moz-range-thumb {
-    width: 31px;
+    width: 30px;
     -webkit-appearance: none;
-    height: 32px;
+    height: 30px;
     cursor: pointer;
     background: url("/assets/slider_thumb_icon.svg") center center no-repeat;
     box-shadow: -500px -124px 0 500px #ffcf40;

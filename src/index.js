@@ -39,6 +39,8 @@ async function dealCards() {
         playerSeatArray.push(bankSeat);
     }
 
+    let playerCardValues = ["player1CardValue", "player2CardValue", "player3CardValue", "bankCardValue"];
+
     burnFirstCard(cardStackPlace, ["-40", "0"], ["-500", "0"]);
 
     await sleep(2000);
@@ -54,7 +56,23 @@ async function dealCards() {
         }
 
         for (let j in playerSeatArray) {
-            cardDealingAnimation(cardsArray, cardStackPlace, playerSeatArray[j]);
+            let cardValue = await cardDealingAnimation(cardsArray, cardStackPlace, playerSeatArray[j]);
+            let playerValue = document.getElementById(playerCardValues[j]);
+            let currPlayerValue = parseInt(playerValue.innerHTML);
+
+            if (cardValue.startsWith("Q") || cardValue.startsWith("K") || cardValue.startsWith("J") || cardValue.startsWith("10")) {
+                cardValue = 10;
+            } else if (cardValue.startsWith("A")) {
+                if (currPlayerValue + 11 > 21) {
+                    cardValue = 1;
+                } else {
+                    cardValue = 11;
+                }
+            } else {
+                cardValue = parseInt(cardValue[0]);
+            }
+            playerValue.innerHTML = currPlayerValue + cardValue;
+            playerValue.style.transform = "rotateZ(-135deg) translateY(-5px) translateX(7px)";
             await sleep(1000);
         }
     }
@@ -62,4 +80,7 @@ async function dealCards() {
     await sleep(2000);
 
     collectCards(["-40", "0"], ["-500", "0"]);
+    for (let j in playerCardValues) {
+        document.getElementById(playerCardValues[j]).innerHTML = 0;
+    }
 }
